@@ -1,0 +1,258 @@
+/*
+	******************************************************************
+	OSHPD HID Trends Product Page CSS - Will Floyd
+	******************************************************************
+	
+	I.	INTRODUCTION
+	================
+	
+	Blah blah blah
+	
+	II.	CONTENTS
+	============
+	
+	1.	OVERALL STYLE / UTILITIES
+	2.	SELECTION MENU
+	3.	DISPLAY LAYOUT
+	4.	PRINT STYLES
+	5.	BUTTONS
+	
+	******************************************************************
+
+	=============================	
+	1.	OVERALL STYLE / UTILITIES
+	=============================
+	
+	A. IMPORTS?
+*/
+@import 'https://github.com/necolas/normalize.css';
+/*
+	B. FONTS
+*/
+#trends-product{
+	font-family: "Arial";
+	font-size:10pt;
+}
+
+/*
+	B. COLOR
+*/
+#trend-menu li ul li:last-child,
+.dataTable tbody tr:last-child td{
+	border-bottom:none !important;
+}
+#trend-menu li ul li.chkd a{
+	background-color:rgba(255,255,255,0.6);
+}
+#trend-menu li a:hover,
+#trend-menu li ul li.chkd a:hover{
+	color:white;
+	background-color:rgba(255,255,255,0.3);
+}
+#trends-product,
+#trend-menu ul li ul,
+#trend-menu li ul li a{
+	background-color:white;
+}
+#trend-menu li a,
+#trend-display .dataTitle,
+#trend-display th{
+	color:white;
+}
+#trend-menu li ul li{
+	border-bottom: thin solid rgba(255,255,255,0.6);
+}
+#trend-display tbody tr:hover{
+	background-color:rgba(0,0,0,0.05);
+}
+.tabs>ul{
+	background-color:lightgray;
+}
+/*#trend-menu>ul,*/
+.dataTable tbody tr td{
+	border-bottom: thin solid lightgray;
+}
+#trend-menu li,
+#trend-display h3,
+#trend-display th
+{
+	background-color:dimgray;
+}
+.dataTable{
+	color:dimgray;
+}
+.instructions,
+#trend-menu ul li ul li a{
+	color:black;
+}
+/*
+	C. ALIGNMENT
+*/
+.floatR{float:right;}
+.floatL{float:left;}
+.alignC{margin:0 auto;}
+
+/*
+	D.	SIZING
+*/
+
+
+/*
+	==================
+	2.	SELECTION MENU
+	==================
+*/
+
+#trend-menu{
+	margin:1.5em 0;
+}
+#trend-menu ul{
+	list-style-type:none;
+	padding-left:0;
+	margin:0;
+}
+#trend-menu li{
+}
+#trend-menu li.chkd{
+	font-weight:bold;
+	background-position:7px 12px;
+	background-size:12px;
+	background-image:url('chkd.png');
+	background-repeat:no-repeat;
+	}
+#trend-menu li a{
+	display:block;
+	padding:10px;
+	padding-left:25px;
+	text-decoration:none;
+}
+#trend-menu ul li ul {
+	padding-left:30px;
+}
+
+
+/*	
+	==================
+	3.	DISPLAY LAYOUT
+	==================
+	
+	A. BOXES AND HEADERS
+*/
+#trend-display{
+	display:block;
+	box-sizing:border-box;
+	margin:1.5em 0;
+}
+.dataSet{
+	padding-bottom:1em;
+}
+.dataTitle{
+	clear:both;
+	padding:0.5em;
+	margin-top: 1em;
+}
+.dataTitle span:nth-child(1){
+	display:none;
+}
+.dataTitle span:nth-child(2){
+	font-style: italic;
+}
+.dataTitle span:nth-child(3){
+	display:block;
+	font-size:12pt;
+	font-weight:bold;
+}
+/*
+	B.	TABLES AND CHARTS
+*/
+.dataTable{
+	margin:1em 0;
+}
+.dataTable table{
+	min-width:65%;
+	margin:0 auto;
+}
+.dataTable thead th, .dataTable tfoot th,
+.dataTable td:first-child,
+.dataTable th:first-child{
+	text-align:left !important;
+}
+.dataTable tfoot th:nth-child(n+2),
+.dataTable thead th:last-child{
+	text-align:right !important;
+}
+.dataTable tr :first-child{
+	font-weight:bold;
+}
+.dataTable th {
+	font-weight:normal;
+	padding:0.5em;
+}
+.dataTable td{
+	text-align:right;
+	padding:0.5em;
+}
+
+/*	
+	==================
+	4.	PRINT STYLES	
+	==================
+*/
+
+@media print {
+
+body {
+    width: 900px;
+}
+
+.button,
+.content_right_column{
+	display:none !important;
+}
+
+.dataSet{
+	page-break-before:always;
+	border-bottom:none !important;
+}
+.dataTitle{
+	background-color:lightgray !important;
+	border-bottom: thin solid dimgray
+}
+.dataTable thead th{
+	border-left: thin solid dimgray;
+}
+.dataTable, .chart{ display:block; }
+
+
+}
+/*	
+	============
+	5.	BUTTONS!	
+	============
+*/
+
+.button,
+.button:visited{
+   display: inline-block;
+   border:none;
+   padding: 0.5em;
+   margin:0.5em;
+   background-color: dimgray;
+   color: white;
+   text-decoration: none;
+   vertical-align: middle;
+   cursor:pointer;
+}
+.button.darkBlue{
+   border-top: 1px solid #569bbd;
+   background: #004891;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+}
+.button.darkBlue:hover {
+   color:white;
+   border-top-color: #28597a;
+   background: #28597a;
+}
